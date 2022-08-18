@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import HelloWorld from './components/hello-world';
+import uniqueId from 'lodash/uniqueId';
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +8,8 @@ class App extends Component {
   }
 
   render() {
-    return <HelloWorld title="Hello from React webpack" />;
+    const test = uniqueId();
+    return <a href="www.google.com">{test}</a>;
   }
 }
 

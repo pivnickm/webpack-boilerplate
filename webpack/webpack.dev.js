@@ -1,4 +1,6 @@
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const commonPaths = require('./paths');
 
 module.exports = {
@@ -46,5 +48,5 @@ module.exports = {
     compress: true,
     hot: true,
   },
-  plugins: [new ReactRefreshWebpackPlugin()],
+  plugins: [new BundleAnalyzerPlugin(), new ReactRefreshWebpackPlugin()],
 };

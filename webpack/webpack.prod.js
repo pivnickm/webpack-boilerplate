@@ -7,12 +7,14 @@ const commonPaths = require('./paths');
 
 module.exports = {
   mode: 'production',
+
   output: {
     filename: `${commonPaths.jsFolder}/[name].[hash].js`,
     path: commonPaths.outputPath,
     chunkFilename: `${commonPaths.jsFolder}/[name].[chunkhash].js`,
   },
   optimization: {
+    // usedExports: true,
     minimizer: [
       new TerserPlugin({
         // Use multi-process parallel running to improve the build speed

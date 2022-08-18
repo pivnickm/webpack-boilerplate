@@ -8,6 +8,9 @@ const commonPaths = require('./paths');
 
 module.exports = {
   entry: commonPaths.entryPath,
+  optimization: {
+    usedExports: true,
+  },
   module: {
     rules: [
       {
